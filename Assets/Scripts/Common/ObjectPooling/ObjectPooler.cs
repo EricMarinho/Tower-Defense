@@ -16,8 +16,7 @@ namespace TowerDefense.ObjectPool
         }
 
         public Dictionary<string, Queue<GameObject>> poolDictionary;
-        public List<Pool> pools;
-        public PoolSpawner poolSpawner;
+        public List<Pool> pools;   
 
         #region Singleton
         public static ObjectPooler instance { get; private set; }
@@ -29,7 +28,6 @@ namespace TowerDefense.ObjectPool
 
         void Start()
         {
-            poolSpawner = GetComponent<PoolSpawner>();
             poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
             foreach (Pool pool in pools)

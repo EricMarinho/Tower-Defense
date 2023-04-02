@@ -17,7 +17,7 @@ namespace TowerDefense.ObjectPool
 
         public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
         {
-            queueSize = objectPoolerInstance.poolDictionary[tag].Count;
+            queueSize = objectPoolerInstance.poolDictionary[tag].Count;   
             if (queueSize == 0)
             {
                 foreach (ObjectPooler.Pool pool in objectPoolerInstance.pools)
@@ -32,6 +32,7 @@ namespace TowerDefense.ObjectPool
             objectToSpawn.SetActive(true);
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
+            objectToSpawn.transform.parent = transform;
             return objectToSpawn;
         }
 

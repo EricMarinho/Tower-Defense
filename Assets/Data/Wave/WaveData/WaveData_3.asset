@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7544406cf4e9d314cb8d9b2737b82e66, type: 3}
-  m_Name: Spawner_1
+  m_Script: {fileID: 11500000, guid: b5509547418d5ce41aa251b3d5353054, type: 3}
+  m_Name: WaveData_3
   m_EditorClassIdentifier: 
-  _spawnRateMin: 5
-  _spawnRateMax: 10
+  _enemiesNumber: 10
+  _spawnRateMin: 2
+  _spawnRateMax: 5
   _enemyTags:
   - CommonEnemy
+  - BlueEnemy

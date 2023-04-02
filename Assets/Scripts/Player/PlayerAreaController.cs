@@ -9,21 +9,16 @@ namespace TowerDefense.Player
 {
     public class PlayerAreaController : MonoBehaviour
     {
-        private PoolSpawner poolSpawner;
         public Action<EnemyData> OnEnemyHit;
-        private EnemyData lastEnemyHit;
-        
 
-        private void Start()
-        {
-            poolSpawner = ObjectPooler.instance.poolSpawner;
-        }
+        [SerializeField] private PoolSpawner poolSpawner;
+        private EnemyData lastEnemyHit;
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Enemy"))
             {
-                lastEnemyHit = other.gameObject.GetComponent<CommonEnemyController>().enemyData;
+                lastEnemyHit = other.gameObject.GetComponent<Enemy>().enemyData;
                 poolSpawner.ReturnToPool(lastEnemyHit._tag, other.gameObject);
                 OnEnemyHit?.Invoke(lastEnemyHit);
             }
