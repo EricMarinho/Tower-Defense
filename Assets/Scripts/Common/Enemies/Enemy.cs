@@ -18,6 +18,7 @@ namespace TowerDefense.Enemies
         private Transform destinationTransform;
         private Vector3 destinationPosition;
         private int currentHealth;
+        private float spawnedPosition;
 
         private void Awake()
         {
@@ -26,6 +27,7 @@ namespace TowerDefense.Enemies
 
         private void Start()
         {
+            spawnedPosition= transform.position.x;
             waveManagerIntance = WaveManager.instance; 
             playerControllerInstance = PlayerController.instance;
             agent.speed = enemyData._speed; 
@@ -40,7 +42,7 @@ namespace TowerDefense.Enemies
 
         public void EnmeyKilled()
         {
-            transform.position += new Vector3(0f, -100f, 0f);
+            transform.position = new Vector3(spawnedPosition,transform.position.y, transform.position.z);
             playerControllerInstance.IncreaseGold(enemyData._goldReward);
             playerControllerInstance.IncreaseScore(enemyData._scoreReward);
             waveManagerIntance.DecreaseEnemiesRemaining();

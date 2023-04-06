@@ -5,7 +5,6 @@ using TowerDefense.ObjectPool;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TowerDefense.UI;
-using static UnityEditor.Progress;
 using TowerDefense.Player;
 
 namespace TowerDefense.Spawn

@@ -58,7 +58,7 @@ namespace TowerDefense.Defenses
         }
         public bool CheckEnoughGold(Defense currentDefense)
         {
-            return playerControllerInstance.currentGold > currentDefense.defenseData._upgradePrice * currentDefense.upgradeLevel;
+            return playerControllerInstance.currentGold >= currentDefense.defenseData._upgradePrice * currentDefense.upgradeLevel;
         }
     }
 }

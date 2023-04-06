@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbdfad31f254e543a9553d9ee9b86ce, type: 3}
   m_Name: TripleCannon
   m_EditorClassIdentifier: 
-  _name: TripleCannon
+  _name: Triple Cannon
   _buyPrice: 30
   _upgradePrice: 15
   _maxUpgradeLevel: 3
