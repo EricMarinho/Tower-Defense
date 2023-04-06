@@ -8,7 +8,7 @@ public class EnemyData : ScriptableObject
     public float _speed;
     public int _health;
     public int _damage;
-    public int _reward;
+    public int _goldReward;
+    public int _scoreReward;
     public string _tag;
-
 }

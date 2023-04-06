@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaveData_2
   m_EditorClassIdentifier: 
   _enemiesNumber: 6
-  _spawnRateMin: 2
+  _spawnRateMin: 3
   _spawnRateMax: 5
   _enemyTags:
   - CommonEnemy

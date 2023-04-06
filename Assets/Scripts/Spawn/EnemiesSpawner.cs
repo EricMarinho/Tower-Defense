@@ -9,6 +9,7 @@ namespace TowerDefense.Spawn
 {
     public class EnemiesSpawner : MonoBehaviour
     {
+        //Data
         [SerializeField] private GameObject spawnPositions;
         [SerializeField] private Transform destinationTransform;
         public WaveData waveData;
@@ -21,17 +22,7 @@ namespace TowerDefense.Spawn
         private float spawnTimer = 0f;
         private float spawnRate = 0f;
 
-        #region Singleton
-        public static EnemiesSpawner instance;
-        private void Awake()
-        {
-            if (instance != null)
-            {
-                return;
-            }
-            instance = this;
-        }
-        #endregion
+        private int enemiesRemaining = 0;
 
         private void Start()
         {
@@ -41,9 +32,12 @@ namespace TowerDefense.Spawn
 
         private void Update()
         {
+            if (enemiesRemaining <= 0)
+                return;
             spawnTimer += Time.deltaTime;
             if (spawnTimer >= spawnRate)
             {
+                enemiesRemaining--;
                 spawnRate = GetRandomTime();
                 SpawnEnemy();
                 spawnTimer = 0;
@@ -54,6 +48,7 @@ namespace TowerDefense.Spawn
         {
             GameObject spawnedEnemy = poolSpawner.SpawnFromPool(GetRandomEnemyTag(), GetRandomSpawnPosition().transform.position, Quaternion.identity);
             spawnedEnemy.gameObject.GetComponent<Enemy>().SetTargetDestination(destinationTransform);
+            spawnedEnemy.gameObject.GetComponent<Enemy>().SetPoolSpawner(poolSpawner);
         }
 
         private string GetRandomEnemyTag()
@@ -75,5 +70,9 @@ namespace TowerDefense.Spawn
             return spawnPositionsArray[UnityEngine.Random.Range(1, spawnPositionsArray.Length)];
         }
 
+        public void ResetEnemiesCount()
+        {
+            enemiesRemaining = waveData._enemiesNumber;
+        }
     }
 }

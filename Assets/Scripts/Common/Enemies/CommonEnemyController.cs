@@ -7,6 +7,6 @@ namespace TowerDefense.Enemies
 {
     public class CommonEnemyController : Enemy
     {
-
+        
     }
 }

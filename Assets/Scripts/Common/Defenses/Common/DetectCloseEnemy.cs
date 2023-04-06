@@ -11,18 +11,18 @@ namespace TowerDefense.Defenses
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.tag == "Enemy")
+            if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Ghost")
             {
-                followerObject.SetTarget(other.transform);
+                followerObject.AddTarget(other.transform);
                 followerObject.enabled = true;
             }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if(other.gameObject.tag == "Enemy")
+            if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Ghost")
             {
-                followerObject.enabled = false;
+                followerObject.RemoveTarget(other.transform);
             }
         }
     }

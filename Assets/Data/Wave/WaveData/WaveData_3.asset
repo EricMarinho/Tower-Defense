@@ -18,3 +18,4 @@ MonoBehaviour:
   _enemyTags:
   - CommonEnemy
   - BlueEnemy
+  - GoldEnemy

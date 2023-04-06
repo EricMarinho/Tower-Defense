@@ -27,7 +27,7 @@ namespace TowerDefense.Player
         [SerializeField] private GameObject leaderboardScreen;
         [SerializeField] private GameObject lifesContainer;
         [SerializeField] private GameObject waveContainer;
-        [SerializeField] private GameObject shopCanvas;
+        
 
         public void GameOver()
         {
@@ -36,7 +36,7 @@ namespace TowerDefense.Player
             leaderboardScreen.SetActive(true);
             lifesContainer.SetActive(false);
             waveContainer.SetActive(false);
-            shopCanvas.SetActive(false);
+            UIHandler.instance.HideBuyUpgradeButtons();
         }
     }
 }

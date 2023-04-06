@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4161067193272256031}
   m_Layer: 2
   m_Name: DetectEnemyTrigger
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,10 +42,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.8
-  m_Height: 7.54
+  m_Radius: 1.9191153
+  m_Height: 3.8382306
   m_Direction: 1
-  m_Center: {x: -1.531991, y: 0, z: 0}
+  m_Center: {x: -2.3169339, y: 0.48719263, z: 0}
 --- !u!114 &4161067193272256031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7540360160946440136}
   - component: {fileID: 7332714104226217880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CaneContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,14 +83,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7492864347409531195}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: -1}
   m_Children:
   - {fileID: 8539141264969593474}
+  - {fileID: 4961490140969905676}
   m_Father: {fileID: 8539141264184231419}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &7332714104226217880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +104,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4007db13bf7224d8db3131e434f57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7599003282216760524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4961490140969905676}
+  m_Layer: 6
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4961490140969905676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599003282216760524}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: -0.07, z: -0.4895}
+  m_LocalScale: {x: 0.49999982, y: 0.49999988, z: 0.49999994}
+  m_Children: []
+  m_Father: {fileID: 7540360160946440136}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8539141263556205354
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +145,7 @@ GameObject:
   - component: {fileID: 8539141263556205353}
   - component: {fileID: 8539141263556205358}
   - component: {fileID: 8539141263556205359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +160,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8539141263556205354}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 0.15, y: 0.07, z: 0.15}
   m_Children: []
   m_Father: {fileID: 8539141264191970266}
@@ -195,7 +226,7 @@ GameObject:
   - component: {fileID: 8539141263695181823}
   - component: {fileID: 8539141263695181820}
   - component: {fileID: 8539141263695181821}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8539141263695181816}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: -0.2}
+  m_LocalPosition: {x: 0, y: 0, z: -0.18}
   m_LocalScale: {x: 0.15, y: 0.07, z: 0.15}
   m_Children: []
   m_Father: {fileID: 8539141263737613405}
@@ -274,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8539141263737613405}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BackBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,9 +339,10 @@ GameObject:
   - component: {fileID: 8539141264184231419}
   - component: {fileID: 4431439135556874906}
   - component: {fileID: 4497405882359986337}
-  m_Layer: 0
+  - component: {fileID: 4226694837779157682}
+  m_Layer: 6
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -323,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8539141264184231364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.46, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7540360160946440136}
@@ -362,6 +394,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e10783ecd6a6e43b0f5fdbbf7b1bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileData: {fileID: 11400000, guid: 511126b46ab402649abfc80d51b8850a, type: 2}
+  defenseData: {fileID: 11400000, guid: 3ac0c1a0704582a458497e0a95ab5fa5, type: 2}
+  poolSpawner: {fileID: 4226694837779157682}
+  shootPoint: {fileID: 4961490140969905676}
+--- !u!114 &4226694837779157682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539141264184231364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c080cef879005c42ac641f3f33313fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8539141264191970267
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8539141264191970266}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FrontBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8539141264191970267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8539141264968894717}
@@ -405,7 +453,7 @@ GameObject:
   - component: {fileID: 8539141264568246813}
   - component: {fileID: 8539141264568246802}
   - component: {fileID: 8539141264568246803}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8539141264568246814}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0.18}
   m_LocalScale: {x: 0.15, y: 0.07, z: 0.15}
   m_Children: []
   m_Father: {fileID: 8539141263737613405}
@@ -486,7 +534,7 @@ GameObject:
   - component: {fileID: 8539141264968894717}
   - component: {fileID: 8539141264968894706}
   - component: {fileID: 8539141264968894707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8539141264968894718}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: -0.2}
+  m_LocalPosition: {x: 0, y: 0, z: -0.18}
   m_LocalScale: {x: 0.15, y: 0.07, z: 0.15}
   m_Children: []
   m_Father: {fileID: 8539141264191970266}
@@ -567,7 +615,7 @@ GameObject:
   - component: {fileID: 8539141264969593474}
   - component: {fileID: 8539141264969593479}
   - component: {fileID: 8539141264969593472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268257345116577990}
   - component: {fileID: 2291380057206400954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DistanceToBuildTrigger
   m_TagString: Defense
   m_Icon: {fileID: 0}
@@ -678,7 +726,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.2
+  m_Radius: 1
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

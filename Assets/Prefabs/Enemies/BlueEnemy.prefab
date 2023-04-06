@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 8078114404602305188}
   m_Layer: 0
   m_Name: BlueEnemy
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,11 +110,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4403802161426457528}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.20115791, y: 0.19799954, z: 0.19875608}
-  m_Center: {x: -0.000034816563, y: 0.00016742945, z: -0.0007689819}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8923536553479233772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: c1707c43a678c7e4e960c5ac9fe548b1, type: 2}
+  isHittable: 0
 --- !u!195 &-7679816432586157495
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -137,7 +138,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 4403802161426457528}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2
+  m_Radius: 0.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -230,7 +231,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4403802160593461294}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4403802162051778463
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -311,7 +312,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4403802160593461294}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4403802162142462557
 MeshFilter:
   m_ObjectHideFlags: 0

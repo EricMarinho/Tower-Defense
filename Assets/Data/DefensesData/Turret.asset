@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdbdfad31f254e543a9553d9ee9b86ce, type: 3}
-  m_Name: CommonCannon
+  m_Name: Turret
   m_EditorClassIdentifier: 
-  _name: Common Cannon
+  _name: Turret
   _buyPrice: 20
   _upgradePrice: 10
-  _damage: 10
-  _fireRate: 7
+  _maxUpgradeLevel: 3
+  _fireRate: 1

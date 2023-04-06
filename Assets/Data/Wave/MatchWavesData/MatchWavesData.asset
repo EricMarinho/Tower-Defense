@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: MatchWavesData
   m_EditorClassIdentifier: 
   _initialWaves:
+  - {fileID: 11400000, guid: d1a4792898927384b942377f44a11a72, type: 2}
   - {fileID: 11400000, guid: 726fe211a3e9cfd419c5ed9270c7dfc9, type: 2}
-  - {fileID: 11400000, guid: 726fe211a3e9cfd419c5ed9270c7dfc9, type: 2}
-  _inifinitWaves:
-  - {fileID: 0}
-  - {fileID: 0}
+  _infinitWaves:
+  - {fileID: 11400000, guid: 8b0ef2d0527399447a91d6bb6b0ce2ca, type: 2}
+  - {fileID: 11400000, guid: 5cc462bcd1ad817478a1156b2f60cb85, type: 2}
+  _secondsBetweenWaves: 10

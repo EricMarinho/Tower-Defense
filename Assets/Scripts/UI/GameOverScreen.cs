@@ -4,17 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using TowerDefense.Scene;
 
-public class GameOverScreen : MonoBehaviour
+namespace TowerDefense.UI
 {
-
-    [SerializeField] private Button restartButton;
-
-    private void Start()
+    public class GameOverScreen : MonoBehaviour
     {
-        Time.timeScale = 0;
-        restartButton.onClick.AddListener(() => {
-            Time.timeScale = 1;
-            GameSceneManager.instance.RestartGame();
+
+        [SerializeField] private Button restartButton;
+
+        private void Start()
+        {
+            Time.timeScale = 0;
+            restartButton.onClick.AddListener(() =>
+            {
+                Time.timeScale = 1;
+                GameSceneManager.instance.RestartGame();
             });
+        }
     }
 }

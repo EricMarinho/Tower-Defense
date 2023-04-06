@@ -6,6 +6,6 @@ namespace TowerDefense.Enemies
 {
     public class BlueEnemyController : Enemy
     {
-        
+        public bool isHittable = true;
     }
 }

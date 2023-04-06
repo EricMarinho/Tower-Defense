@@ -7274,7 +7274,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.125
+        time: 0.9375
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -7283,7 +7283,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.75
+        time: 3.9375
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -7294,10 +7294,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
+    attribute: isHittable
     path: 
-    classID: 65
-    script: {fileID: 0}
+    classID: 114
+    script: {fileID: 11500000, guid: 7fe0db6bf8143f94e87795e36f445d96, type: 3}
   m_PPtrCurves: []
   m_SampleRate: 80
   m_WrapMode: 2
@@ -34145,7 +34145,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.125
+        time: 0.9375
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -34154,7 +34154,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.75
+        time: 3.9375
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -34165,10 +34165,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
+    attribute: isHittable
     path: 
-    classID: 65
-    script: {fileID: 0}
+    classID: 114
+    script: {fileID: 11500000, guid: 7fe0db6bf8143f94e87795e36f445d96, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2

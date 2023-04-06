@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdbdfad31f254e543a9553d9ee9b86ce, type: 3}
-  m_Name: CommonTurret
+  m_Script: {fileID: 11500000, guid: 2cac0221cb4350541be32359985d70ac, type: 3}
+  m_Name: GoldEnemyData
   m_EditorClassIdentifier: 
-  defensePrefab: {fileID: 8539141264184231364, guid: e8c01bb69f784fe4db8d2659fc330d8f, type: 3}
-  _name: Common Turret
-  _buyPrice: 5
-  _upgradePrice: 10
-  _damage: 1
-  _fireRate: 2
+  _speed: 0.4
+  _health: 20
+  _damage: 2
+  _goldReward: 100
+  _scoreReward: 1000
+  _tag: GoldEnemy

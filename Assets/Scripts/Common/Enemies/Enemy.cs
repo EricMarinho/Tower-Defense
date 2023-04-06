@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using TowerDefense.ObjectPool;
+using TowerDefense.Player;
 
 namespace TowerDefense.Enemies
 {
     public class Enemy : MonoBehaviour
     {
-        public EnemyData enemyData;
-
         private NavMeshAgent agent;
+        private PoolSpawner poolSpawner;
+        private WaveManager waveManagerIntance;
+        private PlayerController playerControllerInstance;
 
+        public EnemyData enemyData;
         private Transform destinationTransform;
         private Vector3 destinationPosition;
+        private int currentHealth;
 
         private void Awake()
         {
@@ -21,7 +26,10 @@ namespace TowerDefense.Enemies
 
         private void Start()
         {
+            waveManagerIntance = WaveManager.instance; 
+            playerControllerInstance = PlayerController.instance;
             agent.speed = enemyData._speed; 
+            currentHealth = enemyData._health;
             destinationPosition = new Vector3(destinationTransform.position.x, transform.position.y, transform.position.z);
         }
 
@@ -32,10 +40,19 @@ namespace TowerDefense.Enemies
 
         public void EnmeyKilled()
         {
-            //CallWaveManager
+            transform.position += new Vector3(0f, -100f, 0f);
+            playerControllerInstance.IncreaseGold(enemyData._goldReward);
+            playerControllerInstance.IncreaseScore(enemyData._scoreReward);
+            waveManagerIntance.DecreaseEnemiesRemaining();
+            poolSpawner.ReturnToPool(enemyData._tag, gameObject);
         }
 
-        public void TakeDamage() { 
+        public void TakeDamage(int damage) {
+            currentHealth -= damage;
+            if (currentHealth <= 0)
+            {
+                EnmeyKilled();
+            }
         }
 
         public void SetTargetDestination(Transform destination)
@@ -43,6 +60,10 @@ namespace TowerDefense.Enemies
             destinationTransform = destination;
         }
 
+        public void SetPoolSpawner(PoolSpawner poolSpawner)
+        {
+            this.poolSpawner = poolSpawner;
+        }
 
     }
 }
