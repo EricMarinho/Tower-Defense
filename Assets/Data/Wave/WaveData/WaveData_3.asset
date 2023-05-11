@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5509547418d5ce41aa251b3d5353054, type: 3}
   m_Name: WaveData_3
   m_EditorClassIdentifier: 
-  _enemiesNumber: 10
-  _spawnRateMin: 2
-  _spawnRateMax: 5
+  _enemiesNumber: 20
+  _spawnRateMin: 0.5
+  _spawnRateMax: 2
   _enemyTags:
   - CommonEnemy
   - BlueEnemy
