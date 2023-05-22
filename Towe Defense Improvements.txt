@@ -1,0 +1,21 @@
+// Impedir o jogador de ficar com vida negativa
+
+// Start Game Coroutine ou Colocar botão de start
+// Mecanica inimigos aumentarem a vida conforme os rounds
+// Fazer torretas só atirarem quando inimigos estiverem perto
+// Separate GameScore por user
+// Pensar numa solução para os lugares com if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Ghost"),
+pois toda vez tenho que verificar ambos, talvez fazer um padrão que compare os dois ao mesmo tempo. Uso eles no
+Detect Close Enemy e no PlayerAreaController
+// Analisar arquitetura código delegate PlayerAreaController -> PlayerDamageHandler e estrutura da Hirarquia agora que
+tirei o playerArea de structures
+// Colocar indicador visual de upgrade
+
+// Ideias:
+Defesas:
+- Uma que da 3 tiros de uma vez para os lados
+- Se tiver tempo uma que dê dano em área
+
+Inimigos:
+- Um lento com muita vida, mas que vale muito dinheiro
+- Um inimigo que recupera vida se matar
